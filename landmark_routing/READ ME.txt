@@ -1,0 +1,6 @@
+Code of excercise, already build and compiled.
+
+The /home/db3u01/landmark_routing/main.cpp   (add code for Question 4.b)
+and /home/db3u01/landmark_routing/DBMgmt.h   (add signature getNumOfAllNodes for Question 4.b)
+and /home/db3u01/landmark_routing/DBMgmt.cpp (add implementation of getNumOfAllNodes for Question 4.b)
+is Changed form initial.

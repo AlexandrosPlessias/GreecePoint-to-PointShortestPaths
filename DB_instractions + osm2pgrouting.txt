@@ -1,0 +1,78 @@
+Set up VPN (openVPN)
+Connect: hilon.dit.uop.gr
+
+Username: db3u01
+Password: MD3V6s9r
+
+(use WinSCP)
+
+================================================================================================================================================================================
+RUN osm2pgrouting for GREECE
+
+/usr/share/bin/osm2pgrouting -f /usr/share/osm2pgrouting/greece-latest.osm -c /usr/share/osm2pgrouting/mapconfig.xml -d db3u01 -U db3u01 -W MD3V6s9r --clean
+
+================================================================================================================================================================================
+PSQL
+
+pwd
+psql
+Password: MD3V6s9r
+
+Connect to DB:
+\connect db3u01
+
+See all Tables:
+\dt 
+
+List of relations: (focus ONLY on ways and ways_vertices_pgr)
+\d+ classes
+\d+ nodes
+\d+ osm_nodes
+\d+ osm_relations
+\d+ osm_way_classes
+\d+ osm_way_tags
+\d+ osm_way_types
+\d+ relation_ways
+\d+ relations
+\d+ relations_ways
+\d+ spatial_ref_sys
+\d+ types
+\d+ way_tag
+\d+ ways
+\d+ ways_vertices_pgr
+
+See # of records:
+SELECT count(*) FROM classes;
+SELECT count(*) FROM nodes;
+SELECT count(*) FROM osm_nodes;
+SELECT count(*) FROM osm_relations;
+SELECT count(*) FROM osm_way_classes;
+SELECT count(*) FROM osm_way_tags;
+SELECT count(*) FROM osm_way_types;
+SELECT count(*) FROM relation_ways;
+SELECT count(*) FROM relations;
+SELECT count(*) FROM relations_ways;
+SELECT count(*) FROM spatial_ref_sys;
+SELECT count(*) FROM types;
+SELECT count(*) FROM way_tag;
+SELECT count(*) FROM ways;
+SELECT count(*) FROM ways_vertices_pgr;
+
+See First record of each array (for practical reasons):
+SELECT * FROM classes LIMIT 1;
+SELECT * FROM nodes LIMIT 1;
+SELECT * FROM osm_nodes LIMIT 1;
+SELECT * FROM osm_relationsLIMIT 1;
+SELECT * FROM osm_way_classes LIMIT 1;
+SELECT * FROM osm_way_tags LIMIT 1;
+SELECT * FROM osm_way_types LIMIT 1;
+SELECT * FROM relation_ways LIMIT 1;
+SELECT * FROM relations LIMIT 1;
+SELECT * FROM relations_ways LIMIT 1;
+SELECT * FROM spatial_ref_sys LIMIT 1;
+SELECT * FROM types LIMIT 1;
+SELECT * FROM way_tag LIMIT 1;
+SELECT * FROM ways LIMIT 1;
+SELECT * FROM ways_vertices_pgr LIMIT 1;
+
+================================================================================================================================================================================
